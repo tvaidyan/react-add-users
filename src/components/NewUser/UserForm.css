@@ -1,0 +1,20 @@
+.new-user__controls {
+  text-align: left;
+}
+
+.new-user__control label {
+  font-weight: bold;
+  display: block;
+}
+
+.new-user__control input {
+  font: inherit;
+  border: 1px solid #ccc;
+  width: 98%;
+  margin: 10px 10px 10px 0;
+  padding: 10px 0 10px 10px;
+}
+
+.new-user__actions {
+  text-align: left;
+}
