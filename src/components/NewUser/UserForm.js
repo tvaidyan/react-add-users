@@ -38,9 +38,11 @@ const UserForm = (props) => {
         'Please enter a valid name and age (non-empty values).'
       );
       return;
-    } else {
-      // TODO: This has to be wired up to the modal's OK button or background click handler
-      hideModal();
+    }
+
+    if (enteredAge < 0) {
+      showModal('Invalid Input', 'Please enter a valid age (> 0).');
+      return;
     }
 
     const user = {
@@ -65,10 +67,9 @@ const UserForm = (props) => {
           />
         </div>
         <div className="new-user__control">
-          <label>Age</label>
+          <label>Age (Years)</label>
           <input
             type="number"
-            min="0"
             step="1"
             value={enteredAge}
             onChange={ageChangeHandler}
